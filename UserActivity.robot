@@ -1,0 +1,77 @@
+*** Settings ***
+Library					Selenium2Library
+# Library					String
+# Library					Collections
+# Library					SSHLibrary
+# Library					OperatingSystem
+# Library					HttpLibrary.HTTP
+# Library					RequestsLibrary
+# Library 				Selenium2LibraryExt
+Resource				Variables.robot
+
+*** Keywords ***
+Make Claime
+	Execute Javascript    window.jQuery("li.list-group-item ").find('a[href="/profile/my-policies"]')[0].click();
+	Execute Javascript    window.jQuery("div.account-card").find('a[href="/claims/create/32757"]')[0].click();
+# Fill Make claime fields
+	# window.jQuery("form.form").find('select[name="claim_gadget_id"]')[0].click();
+	Click Element	//select[@id="create-claim-product"]
+	Click Element	//select[@id="create-claim-product"]/optgroup[@label="Tablets"]/option[@value="1" and contains(.,"Acer - Iconia A1")]
+	Click Element	//select[@id="create-claim-was"]
+	Click Element	//select[@id="create-claim-was"]/option[@value="lost" and contains(.,"lost")]
+	Input Text	//textarea[@id="create-claim-description"]	TestDescription
+	Input Text	//input[@id="create-claim-contact-number"]	12345678910
+	sleep	3
+	 Click Element	//div[@class="file-upload-wrapper"]/button[@class="file-upload-button"]
+	Choose File	xpath=//div[@class="file-upload-wrapper"]/input[@class="file-upload-input"]	${CURDIR}/pastel-pink-ivory-scented-chelsea-garden.jpg
+	# Input Text	//div[@class="file-upload-wrapper"]/ input[@class="file-upload-input"]	${CURDIR}/pastel-pink-ivory-scented-chelsea-garden.jpg
+	# ${CURDIR}/pastel-pink-ivory-scented-chelsea-garden.jpg
+	sleep	3
+	Click Button  //button[@id="create-claim-submit"]
+
+View Account
+	Execute Javascript    window.jQuery('a[class="dropdown-toggle"][data-toggle="dropdown"]').click();
+	Execute Javascript    window.jQuery("ul.dropdown-menu").find('a[href="/profile/my-details"]')[0].click();
+
+Forgot Password
+	Input Text	//input[@id="pass-input-email"]	${ForgotPasswordEmail}
+	Click Element	//button[@id="pass-input-submit"]
+	sleep	${Delay}
+Login On G-mail
+	Open SiteUrl  https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1#identifier
+	Input Text 	//input[@id="Email"]	${ForgotPasswordEmail}
+	Click Element	//input[@id="next"]
+	sleep	${Delay}
+	Input Text 	//input[@id="Passwd"]	${ForgotPasswordPassword}
+	Click Element	//input[@id="signIn"]
+	sleep	${Delay}
+Found letter on G-mail
+	Click Element	xpath=//b[contains(text(),"ZugarZnap Your Password Reset Link")]
+	sleep	${Delay}
+	# click forgot password button from letter
+	Click Element	 partial link=http://zz-dev.atomateapps.com/auth/changepassword
+	sleep	${Delay}
+Fill fields password textboxes
+	Select Window	Title=Reset your password - ZugarZnap
+	Input Text 	//input[@name="password"]	${ForgotPasswordPassword}
+	Input Text 	//input[@name="password_confirmation"]	${ForgotPasswordPassword}
+	Click Element	//button[@type="submit"]
+
+Add product to basket as guest
+
+	Click Element	css=.btn.btn-default.dropdown-toggle
+	Click Element	//a[@data-value="690"]
+	Input Text 	//input[@name="car"]	Xs 123
+	Input Text 	//input[@id="first-name"]	${Firstname}
+	Input Text 	//input[@id="last-name"]	${Lastname}
+	Input Text 	//input[@id="IAddressPostcode"]	${PostalCode}
+	Click Element	//div[@class="getcaver-inputs"]/div[1]/div/span
+	# Execute Javascript    window.jQuery("div.input-postcode-container postcode").find('button.btn.btn-default')[0].click();
+	sleep	${Delay}
+	Click Element	//select[@id="____select_for____ILookForAddress"]
+	Click Element	//option[@value="3"]
+	Input Text	//id="phone-number"	${PhoneNumber}
+	Input Text	//id="email"	${Email}
+	Click Element	//label[@for="check1"]
+	Click Element	//button[@type="submit"]
+	Element Text Should Be    css=.checkout-title    total to pay now
