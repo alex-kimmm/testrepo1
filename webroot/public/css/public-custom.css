@@ -1,0 +1,19 @@
+nav.zz-main-menu ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav.zz-main-menu ul li {
+    display: inline-block;
+    border-left: 1px solid black;
+    padding: 1px 10px;
+}
+
+nav.zz-main-menu ul li:first-child {
+    border: none;
+}
+
+nav.zz-main-menu ul li.active a {
+    font-weight: bold;
+    text-decoration: none;
+}

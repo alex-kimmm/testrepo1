@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'NorthshireScript';
+    src: url('northshire/NorthshireScript.eot');
+    src: url('northshire/NorthshireScript.woff2') format('woff2'),
+    url('northshire/NorthshireScript.woff') format('woff'),
+    url('northshire/NorthshireScript.ttf') format('truetype'),
+    url('northshire/NorthshireScript.svg#NorthshireScript') format('svg'),
+    url('northshire/NorthshireScript.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'NorthshireScriptSlant';
+    src: url('northshire-slant/NorthshireScriptSlant.eot');
+    src: url('northshire-slant/NorthshireScriptSlant.woff2') format('woff2'),
+    url('northshire-slant/NorthshireScriptSlant.woff') format('woff'),
+    url('northshire-slant/NorthshireScriptSlant.ttf') format('truetype'),
+    url('northshire-slant/NorthshireScriptSlant.svg#NorthshireScriptSlant') format('svg'),
+    url('northshire-slant/NorthshireScriptSlant.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+

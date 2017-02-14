@@ -1,0 +1,12 @@
+*
+!/files
+!/claims
+!/insurancepages
+!/music
+!/slideshowitems
+!/insuranceblocks
+!/insuranceblocks/files
+!/homepageblocks
+!/headerblocks
+!.gitignore
+!img-not-found.png

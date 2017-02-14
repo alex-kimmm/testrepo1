@@ -1,0 +1,83 @@
+
+.giphy_api .form-group {
+    float: left;
+    display: inline;
+    margin-right: 15px;
+}
+
+.failz-preview {
+    max-width: 256px;
+    margin-bottom: 20px;
+}
+
+.failz-preview img{
+    width: inherit;
+}
+
+.product-images {
+    margin-bottom: 25px;
+}
+
+.orders-form-top {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.orders-form-top.orders-form-top-text {
+    margin-top: 5px;
+}
+
+.details-table td {
+    padding: 0 20px 0 0;
+}
+
+.gradient-description {
+    width: 70%;
+}
+
+
+.treeOptions table {
+    display: table !important;
+}
+
+.treeOptions tbody {
+    display: table-footer-group !important;
+}
+
+.tr-ui-tree-node {
+    display: table-row !important;
+}
+
+.table-ui-tree-nodes {
+    display: table !important;
+    table-layout: fixed !important;
+}
+
+.treeOptions td {
+    display: table-cell !important;
+    table-layout: fixed !important;
+}
+
+table.angular-ui-tree-drag{
+    display: table !important;
+    table-layout: fixed !important;
+}
+
+table.angular-ui-tree-drag tr{
+    display: table-row !important;
+    table-layout: fixed !important;
+}
+
+table.angular-ui-tree-drag td{
+    display: table-cell !important;
+    table-layout: fixed !important;
+}
+
+tr.angular-ui-tree-node{
+    display: table-row;
+}
+
+table.angular-ui-tree-drag tr{
+    display: table-row;
+    width: 100%;
+}

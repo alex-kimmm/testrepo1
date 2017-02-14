@@ -1,0 +1,223 @@
+/* General Styles
+--------------------------------------------- */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #3d3d3d;
+}
+
+
+
+/* Imports
+--------------------------------------------- */
+
+
+/* Helper Classes
+--------------------------------------------- */
+
+.clearfix {
+	display: block;
+	clear: both;
+}
+
+
+/* Typography
+--------------------------------------------- */
+
+body {
+	font-size:22px;
+	line-height: 32px;
+	color: #ffffff;
+	word-wrap:break-word !important;
+	font-family: "museo-sans", sans-serif;
+}
+
+p {
+	margin: 0 0 24px;
+	margin: 0 0 2.4rem;
+	padding: 0;
+	font-family: "museo-sans", sans-serif;
+}
+
+
+/* Links
+--------------------------------------------- */
+
+a {
+	text-decoration: none;
+	color: #FF5722
+}
+
+a:hover {
+	text-decoration: underline; 
+	color: #E64A19;
+}
+
+
+
+/* Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #ffffff;
+	font-family: "museo-sans", sans-serif;
+	font-weight: 700;
+	line-height: 1.2;
+	margin: 0 0 16px;
+}
+
+h1 {
+	font-size: 54px;
+}
+
+h2 {
+	font-size: 40px;
+	color: #ffdc00;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+h4 {
+	font-size: 20px;
+}
+
+h5 {
+	font-size: 18px;
+}
+
+h6 {
+	font-size: 16px;
+}
+
+
+
+/* Sections
+--------------------------------------------- */
+
+#container{
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+
+
+/* Header
+--------------------------------------------- */
+
+header {
+	width: 94%;
+	padding: 3%;
+	background-color: #FF5722;
+}
+
+header #title {
+	font-size: 50px;
+	color: #fff;
+}
+
+
+
+/* Navigation
+--------------------------------------------- */
+
+nav {
+	width: 97%;
+	background-color: #E64A19;
+	padding: 0 1.5% 0 1.5%;
+}
+
+nav ul li {
+	display: inline-block;
+	padding: 15px 1.5% 15px 1.5% ;
+}
+
+nav ul li a {
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 1.2em;
+}
+
+nav ul li a:hover {
+	color: #000000;
+	text-decoration: none;
+}
+
+
+
+/* Content
+--------------------------------------------- */
+
+#content {
+	float: left;
+	padding: 3%;
+	width: 64%;
+}
+
+
+
+/* Sidebar
+--------------------------------------------- */
+
+aside {
+	float: left;
+	padding: 3%;
+	width: 18%;
+}
+
+
+
+/* Footer
+--------------------------------------------- */
+
+footer{
+	width: 94%;
+	padding: 3%;
+	background-color: #FF5722;
+	border-top: 5px solid #E64A19;
+	color: #fff;
+	text-align: center;
+}
+
+
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width : 768px) {
+
+	header {
+		text-align: center;
+	}
+
+	nav {
+		text-align: center;
+	}
+
+	#content {
+		width: 80%;
+		padding: 10% 10% 10% 10%;	
+	}
+
+	#sidebar {
+		width: 50%;
+		padding: 10% 25% 0% 25%;	
+	}
+
+}
+
+@media all and (max-width : 330px) {
+
+	nav ul li {
+		display:block;
+		width: 94%;
+	}
+
+}

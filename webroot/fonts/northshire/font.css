@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'NorthshireScript';
+  src: url('NorthshireScript.eot');
+  src: url('NorthshireScript.woff2') format('woff2'),
+       url('NorthshireScript.woff') format('woff'),
+       url('NorthshireScript.ttf') format('truetype'),
+       url('NorthshireScript.svg#NorthshireScript') format('svg'),
+       url('NorthshireScript.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
